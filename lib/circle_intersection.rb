@@ -1,3 +1,4 @@
 module CircleIntersection
-  require "circle_intersection/circles"
+  require "circle_intersection/circle"
+  require "circle_intersection/point"
 end
