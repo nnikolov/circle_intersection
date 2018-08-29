@@ -1133,3 +1133,43 @@ CircleIntersectionTest: test_truth
 CircleIntersectionTest: test_Testing_circle_within_circle
 ---------------------------------------------------------
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+CircleIntersectionTest: test_Add_point_to_a_point
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+CircleIntersectionTest: test_Testing_distance_between_two_points
+----------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------
+CircleIntersectionTest: test_Testing_if_two_circles_intersect
+-------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+CircleIntersectionTest: test_Testing_coincident_circles
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------
+CircleIntersectionTest: test_truth
+----------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+CircleIntersectionTest: test_Subtract_point_from_a_point
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+CircleIntersectionTest: test_Testing_separate_circles
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+CircleIntersectionTest: test_Testing_circle_within_circle
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction

@@ -53,6 +53,10 @@ class CircleIntersectionTest < ActiveSupport::TestCase
     c1 = Circle.new(x: 15, y: 15, r: 5)
     c2 = Circle.new(x: 15, y: 15, r: 5)
     assert_equal false, c1.intersects?(c2)
+
+    c1 = Circle.new(x: 15, y: 15, r: 5)
+    c2 = Circle.new(x: 17, y: 17, r: 5)
+    assert c1.intersects?(c2)
   end
 
   test "Subtract point from a point" do
