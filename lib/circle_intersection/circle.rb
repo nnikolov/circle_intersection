@@ -13,6 +13,19 @@ class Circle
     Point.new(x: @x, y: @y)
   end
 
+  # Returns the distance between the center of the circle
+  # and the line that goes through the two points of intersection
+  def distance_to_chord(other)
+    d = center.distance(other.center)
+    (r ** 2 - other.r ** 2 + d ** 2) / (2 * d)
+  end
+
+  # Returns half of the length of the chord line
+  def height(other)
+    a = distance_to_chord(other)
+    Math.sqrt(r ** 2 - a ** 2)
+  end
+
   # Returns true if the two circles intersect
   def intersects?(other)
     return false if separate?(other)
