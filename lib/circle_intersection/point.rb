@@ -18,4 +18,8 @@ class Point
   def +(other)
     Point.new(x: @x + other.x, y: @y + other.y)
   end
+
+  def scale(s)
+    Point.new(x: @x * s, y: @y * s)
+  end
 end

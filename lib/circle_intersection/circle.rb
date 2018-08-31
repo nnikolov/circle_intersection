@@ -26,11 +26,39 @@ class Circle
     Math.sqrt(r ** 2 - a ** 2)
   end
 
+  # Returns the point in the center of the intersection
+  def intersection_center(other)
+    p0 = center
+    p1 = other.center
+    a = distance_to_chord other
+    d = center.distance other.center
+    (p1 - p0).scale(a/d) + p0
+  end
+
+  # Returns an array of the two points of intersection
+  def points_of_intersection(other)
+    return false unless intersects? other
+    r = []
+    p0 = center
+    p1 = other.center
+    p2 = intersection_center other
+    h = height other
+    d = center.distance other.center
+
+    x3 = p2.x + h*(p1.y - p0.y)/d
+    y3 = p2.y - h*(p1.x - p0.x)/d
+    x4 = p2.x - h*(p1.y - p0.y)/d
+    y4 = p2.y + h*(p1.x - p0.x)/d
+
+    r << Point.new(x: x3, y: y3)
+    r << Point.new(x: x4, y: y4)
+  end
+
   # Returns true if the two circles intersect
   def intersects?(other)
-    return false if separate?(other)
-    return false if contained?(other)
-    return false if coincident?(other)
+    return false if separate? other
+    return false if contained? other
+    return false if coincident? other
     true
   end
 
