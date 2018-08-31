@@ -1,3 +1,5 @@
+# https://stackoverflow.com/questions/3349125/circle-circle-intersection-points
+
 class Circle
 
   attr_accessor :x, :y, :r
