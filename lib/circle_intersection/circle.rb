@@ -54,6 +54,12 @@ class Circle
     r << Point.new(x: x4, y: y4)
   end
 
+  # Returns the larger point
+  def larger_point_of_intersection(other)
+    a = points_of_intersection(other)
+    a.sort_by{|p| [p.x, p.y]}.last
+  end
+
   # Returns true if the two circles intersect
   def intersects?(other)
     return false if separate? other
