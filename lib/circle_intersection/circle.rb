@@ -38,7 +38,6 @@ class Circle
   # Returns an array of the two points of intersection
   def points_of_intersection(other)
     return false unless intersects? other
-    r = []
     p0 = center
     p1 = other.center
     p2 = intersection_center other
@@ -50,8 +49,7 @@ class Circle
     x4 = p2.x - h*(p1.y - p0.y)/d
     y4 = p2.y + h*(p1.x - p0.x)/d
 
-    r << Point.new(x: x3, y: y3)
-    r << Point.new(x: x4, y: y4)
+    [Point.new(x: x3, y: y3), Point.new(x: x4, y: y4)]
   end
 
   # Returns the larger point
