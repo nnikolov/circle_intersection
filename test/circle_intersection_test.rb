@@ -120,5 +120,9 @@ class CircleIntersectionTest < ActiveSupport::TestCase
     c2 = Circle.new(x: 10, y: 14, r: 10)
     assert_equal 19.79795897113271, c1.larger_point_of_intersection(c2).x
     assert_equal 12.0, c1.larger_point_of_intersection(c2).y
+
+    c1 = Circle.new(x: 10, y: 10, r: 10)
+    c2 = Circle.new(x: 10, y: 54, r: 10)
+    assert_equal false, c1.larger_point_of_intersection(c2)
   end
 end

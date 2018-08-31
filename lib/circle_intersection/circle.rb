@@ -56,6 +56,8 @@ class Circle
   def larger_point_of_intersection(other)
     a = points_of_intersection(other)
     a.sort_by{|p| [p.x, p.y]}.last
+    rescue
+      false
   end
 
   # Returns true if the two circles intersect
