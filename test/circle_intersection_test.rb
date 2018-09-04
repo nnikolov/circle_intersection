@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CircleIntersectionTest < ActiveSupport::TestCase
+class CircleIntersection::Test < ActiveSupport::TestCase
   test "truth" do
     assert_kind_of Module, CircleIntersection
   end
@@ -125,4 +125,5 @@ class CircleIntersectionTest < ActiveSupport::TestCase
     c2 = Circle.new(x: 10, y: 54, r: 10)
     assert_equal false, c1.larger_point_of_intersection(c2)
   end
+
 end
