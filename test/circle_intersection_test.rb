@@ -105,10 +105,13 @@ class CircleIntersection::Test < ActiveSupport::TestCase
   test "Points of intersection" do
     c1 = Circle.new(x: 10, y: 10, r: 10)
     c2 = Circle.new(x: 10, y: 14, r: 10)
-    assert_equal 19.79795897113271, c1.points_of_intersection(c2)[0].x
-    assert_equal 12.0, c1.points_of_intersection(c2)[0].y
-    assert_equal 0.20204102886728847, c1.points_of_intersection(c2)[1].x
-    assert_equal 12.0, c1.points_of_intersection(c2)[1].y
+    
+    intersection = c1.points_of_intersection(c2)
+
+    assert_equal 19.79795897113271, intersection[0].x
+    assert_equal 12.0, intersection[0].y
+    assert_equal 0.20204102886728847, intersection[1].x
+    assert_equal 12.0, intersection[1].y
 
     c1 = Circle.new(x: 10, y: 10, r: 10)
     c2 = Circle.new(x: 10, y: 54, r: 10)
