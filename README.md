@@ -16,7 +16,7 @@ To calculate the intersection points of two circles if any.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'circle_intersection', '0.1.0', git: 'https://github.com/nnikolov/CircleIntersection.git'
+gem 'circle_intersection', '0.1.0', git: 'https://github.com/nnikolov/circle_intersection.git'
 
 ```
 
