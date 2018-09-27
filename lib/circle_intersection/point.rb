@@ -3,8 +3,8 @@ class Point
   attr_accessor :x, :y
 
   def initialize(params)
-    self.x = params[:x]
-    self.y = params[:y]
+    self.x = params[:x].to_f
+    self.y = params[:y].to_f
   end
 
   def distance(other)

@@ -5,9 +5,9 @@ class Circle
   attr_accessor :x, :y, :r
 
   def initialize(params)
-    self.x = params[:x]
-    self.y = params[:y]
-    self.r = params[:r]
+    self.x = params[:x].to_f
+    self.y = params[:y].to_f
+    self.r = params[:r].to_f
   end
 
   # Returns the center point of the circle
